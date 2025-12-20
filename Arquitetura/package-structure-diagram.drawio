@@ -1,0 +1,167 @@
+<mxfile host="app.diagrams.net" modified="2024-12-20T10:00:00.000Z" agent="5.0" version="22.1.0" etag="diagram-package-structure" type="device">
+  <diagram name="Package Structure" id="package-structure">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title-package" value="Estrutura de Pacotes e Pastas - Projeto Spring Boot" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="234.5" y="30" width="700" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle-package" value="API REST - Gerenciamento de Produtos (MVC Pattern)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="70" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Root Project -->
+        <mxCell id="root-folder" value="📁 &lt;b&gt;produto-api&lt;/b&gt; (raiz do projeto)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="1000" height="1380" as="geometry" />
+        </mxCell>
+
+        <!-- SRC Folder -->
+        <mxCell id="src-folder" value="📁 &lt;b&gt;src&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="920" height="1200" as="geometry" />
+        </mxCell>
+
+        <!-- Main Folder -->
+        <mxCell id="main-folder" value="📁 &lt;b&gt;main&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="840" height="900" as="geometry" />
+        </mxCell>
+
+        <!-- Java Folder -->
+        <mxCell id="java-folder" value="📁 &lt;b&gt;java&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="260" width="760" height="680" as="geometry" />
+        </mxCell>
+
+        <!-- Base Package -->
+        <mxCell id="base-package" value="📦 &lt;b&gt;com.empresa.produtoapi&lt;/b&gt; (pacote raiz)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="240" y="300" width="680" height="620" as="geometry" />
+        </mxCell>
+
+        <!-- Controller Package -->
+        <mxCell id="pkg-controller" value="📦 &lt;b&gt;controller&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="340" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-controller-files" value="📄 ProdutoController.java&#10;📄 GlobalExceptionHandler.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="370" width="280" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Service Package -->
+        <mxCell id="pkg-service" value="📦 &lt;b&gt;service&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="460" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-service-files" value="📄 ProdutoService.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="490" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Repository Package -->
+        <mxCell id="pkg-repository" value="📦 &lt;b&gt;repository&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="560" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-repository-files" value="📄 ProdutoRepository.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="590" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Model Package -->
+        <mxCell id="pkg-model" value="📦 &lt;b&gt;model&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="280" y="660" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-model-files" value="📄 Produto.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="690" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- DTO Package (Optional) -->
+        <mxCell id="pkg-dto" value="📦 &lt;b&gt;dto&lt;/b&gt; (opcional)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;fontColor=#333333;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="760" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-dto-files" value="📄 ProdutoDTO.java&#10;📄 ProdutoCreateDTO.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="790" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Config Package (Optional) -->
+        <mxCell id="pkg-config" value="📦 &lt;b&gt;config&lt;/b&gt; (opcional)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;verticalAlign=top;align=left;spacingLeft=10;fontColor=#333333;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="280" y="860" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkg-config-files" value="📄 OpenAPIConfig.java&#10;📄 CorsConfig.java" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="290" y="890" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Main Application Class -->
+        <mxCell id="main-class" value="📄 &lt;b&gt;ProdutoApiApplication.java&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontSize=11;fontColor=#ffffff;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="340" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="main-class-desc" value="@SpringBootApplication&#10;Classe principal com método main()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#ffffff;" vertex="1" parent="main-class">
+          <mxGeometry y="25" width="280" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Package Descriptions on the right -->
+        <mxCell id="desc-controller" value="&lt;b&gt;Responsável por:&lt;/b&gt;&#10;• Receber requisições HTTP&#10;• Validar entrada&#10;• Chamar services&#10;• Retornar responses" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=9;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="620" y="420" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="desc-service" value="&lt;b&gt;Responsável por:&lt;/b&gt;&#10;• Lógica de negócio&#10;• Validações de regras&#10;• Orquestração de repositories&#10;• Transformação de dados" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=9;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="620" y="520" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="desc-repository" value="&lt;b&gt;Responsável por:&lt;/b&gt;&#10;• Acesso ao banco de dados&#10;• Queries personalizadas&#10;• CRUD operations (via JPA)&#10;• Abstração de persistência" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=9;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="620" y="620" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="desc-model" value="&lt;b&gt;Responsável por:&lt;/b&gt;&#10;• Representar entidades de domínio&#10;• Mapeamento JPA (@Entity)&#10;• Atributos e relacionamentos&#10;• Regras de validação básicas" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=9;spacingLeft=5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="620" y="720" width="280" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Resources Folder -->
+        <mxCell id="resources-folder" value="📁 &lt;b&gt;resources&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="960" width="760" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="resources-files" value="📄 &lt;b&gt;application.properties&lt;/b&gt; (configurações da aplicação)&#10;📄 schema.sql (DDL - opcional)&#10;📄 data.sql (dados iniciais - opcional)&#10;📁 static/ (arquivos estáticos - opcional)&#10;📁 templates/ (templates - opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="220" y="1000" width="720" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Test Folder -->
+        <mxCell id="test-folder" value="📁 &lt;b&gt;test&lt;/b&gt; (testes unitários e integração)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1140" width="840" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="test-structure" value="📁 java/&#10;  └── 📦 com.empresa.produtoapi/&#10;      ├── 📄 ProdutoControllerTest.java&#10;      ├── 📄 ProdutoServiceTest.java&#10;      └── 📄 ProdutoRepositoryTest.java&#10;&#10;📁 resources/&#10;  └── 📄 application-test.properties" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1180" width="800" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- Root Files -->
+        <mxCell id="root-files" value="📄 &lt;b&gt;pom.xml&lt;/b&gt; (Maven - dependências e build)&#10;📄 &lt;b&gt;.gitignore&lt;/b&gt; (arquivos ignorados pelo Git)&#10;📄 &lt;b&gt;README.md&lt;/b&gt; (documentação do projeto)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontFamily=Courier New;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="1400" width="920" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend-box-pkg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1560" width="500" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title-pkg" value="&lt;b&gt;Legenda - Convenções de Nomenclatura&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="1575" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-content" value="📦 = Pacote Java (package)&#10;📁 = Pasta/Diretório (folder)&#10;📄 = Arquivo (file)&#10;&#10;&lt;b&gt;Padrões de nomenclatura:&lt;/b&gt;&#10;• Pacotes: tudo minúsculo (ex: controller, service)&#10;• Classes: PascalCase (ex: ProdutoController)&#10;• Arquivos de config: camelCase ou kebab-case" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1605" width="460" height="145" as="geometry" />
+        </mxCell>
+
+        <!-- Best Practices Box -->
+        <mxCell id="practices-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1560" width="480" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="practices-title" value="&lt;b&gt;Boas Práticas - Organização&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="620" y="1575" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="practices-content" value="✓ &lt;b&gt;Separação por camadas&lt;/b&gt; (MVC)&#10;✓ &lt;b&gt;Um arquivo por classe&lt;/b&gt; (princípio de responsabilidade única)&#10;✓ &lt;b&gt;Pacotes organizados por funcionalidade&lt;/b&gt;&#10;✓ &lt;b&gt;Nomenclatura clara e consistente&lt;/b&gt;&#10;✓ &lt;b&gt;Testes na mesma estrutura&lt;/b&gt; que o código principal&#10;✓ &lt;b&gt;Configurações centralizadas&lt;/b&gt; em application.properties&#10;✓ &lt;b&gt;DTOs separados&lt;/b&gt; das entidades (quando necessário)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1605" width="440" height="145" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,218 @@
+<mxfile host="app.diagrams.net" modified="2024-12-20T10:00:00.000Z" agent="5.0" version="22.1.0" etag="diagram-component" type="device">
+  <diagram name="Component Diagram" id="component-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title-component" value="Diagrama de Componentes e Fluxo de Dados" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="284.5" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle-component" value="API REST - Padrão MVC com Spring Boot" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="70" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Client Layer -->
+        <mxCell id="client-layer" value="&lt;&lt; Cliente &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=center;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="1000" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="client-http" value="&lt;b&gt;Cliente HTTP&lt;/b&gt;&lt;br&gt;(Postman, Browser, App)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="client-swagger" value="&lt;b&gt;Swagger UI&lt;/b&gt;&lt;br&gt;(Documentação Interativa)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="460" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="client-partner" value="&lt;b&gt;Sistema Parceiro&lt;/b&gt;&lt;br&gt;(Integração via API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Presentation Layer -->
+        <mxCell id="presentation-layer" value="&lt;&lt; Camada de Apresentação &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="1000" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Controllers -->
+        <mxCell id="comp-controller" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoController&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="350" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-controller-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-controller">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-controller-methods" value="REST Endpoints:&#10;GET, POST, PUT, DELETE&#10;/produtos/**" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-controller">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Exception Handler -->
+        <mxCell id="comp-exception" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;ExceptionHandler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="350" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-exception-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-exception">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-exception-desc" value="Tratamento global&#10;de exceções&#10;e erros HTTP" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-exception">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Business Layer -->
+        <mxCell id="business-layer" value="&lt;&lt; Camada de Negócio &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="1000" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Service -->
+        <mxCell id="comp-service" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoService&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="570" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-service-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-service">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-service-methods" value="Lógica de Negócio:&#10;- Validações&#10;- Processamento&#10;- Transformações" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-service">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- DTO Mapper -->
+        <mxCell id="comp-mapper" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;DTOMapper&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="570" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-mapper-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-mapper">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-mapper-desc" value="Conversão entre&#10;Entity ↔ DTO&#10;(Opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-mapper">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Data Access Layer -->
+        <mxCell id="data-layer" value="&lt;&lt; Camada de Acesso a Dados &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="740" width="1000" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Repository -->
+        <mxCell id="comp-repository" value="&lt;&lt;component&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoRepository&lt;/b&gt;&lt;br&gt;extends JpaRepository" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="240" y="790" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-repository-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-repository">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-repository-methods" value="CRUD Operations:&#10;+ findByNome()&#10;+ Métodos JPA padrão" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-repository">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- JPA/Hibernate -->
+        <mxCell id="comp-jpa" value="&lt;&lt;framework&gt;&gt;&lt;br&gt;&lt;b&gt;Spring Data JPA&lt;/b&gt;&lt;br&gt;+ Hibernate" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="680" y="790" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-jpa-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-jpa">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-jpa-desc" value="ORM Framework&#10;Mapeamento&#10;Objeto-Relacional" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-jpa">
+          <mxGeometry y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Domain Model Layer -->
+        <mxCell id="model-layer" value="&lt;&lt; Camada de Modelo (Domínio) &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=center;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="960" width="1000" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Entity -->
+        <mxCell id="comp-entity" value="&lt;&lt;entity&gt;&gt;&lt;br&gt;&lt;b&gt;Produto&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1010" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="comp-entity-icon" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp-entity">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="comp-entity-desc" value="@Entity JPA&#10;Atributos + Anotações" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="comp-entity">
+          <mxGeometry y="30" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="database-layer" value="&lt;&lt; Banco de Dados &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1140" width="1000" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="comp-database" value="&lt;b&gt;H2 Database&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1190" width="160" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="db-desc" value="Tabela: PRODUTO&#10;• In-memory database&#10;• Auto-configurado&#10;• Console Web: /h2-console" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="1190" width="250" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Flow Arrows -->
+        <mxCell id="flow-1" value="HTTP Request&#10;(JSON)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="client-http" target="comp-controller">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow-2" value="Chama&#10;Service" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="comp-controller" target="comp-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow-3" value="Usa&#10;Repository" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="comp-service" target="comp-repository">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow-4" value="Acessa&#10;Entity" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=10;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" edge="1" parent="1" source="comp-repository" target="comp-entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow-5" value="SQL&#10;Queries" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitDx=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=10;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;" edge="1" parent="1" source="comp-entity" target="comp-database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="flow-6" value="HTTP Response&#10;(JSON)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;" edge="1" parent="1" source="comp-controller" target="client-http">
+          <mxGeometry x="-0.0877" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="373" />
+              <mxPoint x="1020" y="210" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Additional Components Box -->
+        <mxCell id="additional-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1320" width="480" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="additional-title" value="&lt;b&gt;Componentes Adicionais&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="1335" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="additional-list" value="• &lt;b&gt;application.properties:&lt;/b&gt; Configurações da aplicação&#10;• &lt;b&gt;SpringBootApplication:&lt;/b&gt; Classe principal (@SpringBootApplication)&#10;• &lt;b&gt;OpenAPI Config:&lt;/b&gt; Configuração do Swagger&#10;• &lt;b&gt;CORS Config:&lt;/b&gt; Configuração de requisições cross-origin&#10;• &lt;b&gt;schema.sql:&lt;/b&gt; Script DDL inicial (opcional)&#10;• &lt;b&gt;data.sql:&lt;/b&gt; Dados iniciais (opcional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1365" width="440" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Data Flow Description -->
+        <mxCell id="dataflow-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1320" width="480" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dataflow-title" value="&lt;b&gt;Fluxo de Dados (Request/Response)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="620" y="1335" width="350" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dataflow-desc" value="&lt;b&gt;Request (Entrada):&lt;/b&gt;&#10;Cliente → Controller → Service → Repository → DB&#10;&#10;&lt;b&gt;Response (Saída):&lt;/b&gt;&#10;DB → Repository → Service → Controller → Cliente&#10;&#10;&lt;b&gt;Formato:&lt;/b&gt; JSON (Content-Type: application/json)&#10;&lt;b&gt;Protocolo:&lt;/b&gt; HTTP/HTTPS&#10;&lt;b&gt;Autenticação:&lt;/b&gt; Não implementada (pode ser adicionada)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1365" width="440" height="125" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

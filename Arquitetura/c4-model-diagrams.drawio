@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net" modified="2024-12-20T10:00:00.000Z" agent="5.0" version="22.1.0" etag="diagram-c4-model" type="device">
+  <diagram name="C4 - Context" id="context-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title-context" value="C4 Model - Diagrama de Contexto" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="384.5" y="40" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Subtitle -->
+        <mxCell id="subtitle-context" value="API REST - E-commerce de Produtos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="80" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Sistema Central -->
+        <mxCell id="system-api" value="&lt;b&gt;API REST Produtos&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;API RESTful que gerencia o catálogo de produtos para e-commerce. Fornece operações CRUD e consultas avançadas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0D5EAF;fontColor=#ffffff;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="280" width="300" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Parceiros (Usuário externo) -->
+        <mxCell id="user-parceiros" value="&lt;b&gt;Parceiros da Empresa&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Pessoa]&lt;br&gt;&lt;br&gt;Empresas parceiras que consomem os dados de produtos via API" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#2D7600;strokeColor=#1F5100;fontColor=#000000;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="120" y="290" width="60" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Administradores -->
+        <mxCell id="user-admin" value="&lt;b&gt;Administradores&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Pessoa]&lt;br&gt;&lt;br&gt;Equipe interna que gerencia o catálogo de produtos" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#2D7600;strokeColor=#1F5100;fontColor=#000000;fontSize=14;labelPosition=center;align=center;" vertex="1" parent="1">
+          <mxGeometry x="989" y="290" width="60" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Banco de Dados -->
+        <mxCell id="system-database" value="&lt;b&gt;Banco de Dados&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Sistema Externo]&lt;br&gt;&lt;br&gt;Armazena informações de produtos persistentemente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;fontColor=#ffffff;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="560" width="300" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Conexões -->
+        <mxCell id="conn-parceiros-api" value="Consulta e integra dados de produtos&lt;br&gt;[HTTPS/JSON]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="user-parceiros" target="system-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn-admin-api" value="Gerencia catálogo de produtos&lt;br&gt;[HTTPS/JSON]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="user-admin" target="system-api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn-api-database" value="Lê e grava dados&lt;br&gt;[JPA/JDBC]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="system-api" target="system-database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="280" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title" value="&lt;b&gt;Legenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="610" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-person" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#2D7600;strokeColor=#1F5100;" vertex="1" parent="1">
+          <mxGeometry x="60" y="640" width="20" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-person-text" value="Usuário/Ator" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="650" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-system" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0D5EAF;" vertex="1" parent="1">
+          <mxGeometry x="50" y="690" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-system-text" value="Sistema Principal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="695" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-external" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="50" y="735" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external-text" value="Sistema Externo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="740" width="200" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="C4 - Container" id="container-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title-container" value="C4 Model - Diagrama de Container" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="384.5" y="30" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle-container" value="Visão Interna da API REST de Produtos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="70" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Container: API Application -->
+        <mxCell id="container-boundary" value="API REST Produtos [Software System]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1168bd;strokeWidth=3;fontSize=16;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="769" height="500" as="geometry" />
+        </mxCell>
+
+        <!-- Web API Container -->
+        <mxCell id="container-webapi" value="&lt;b&gt;API REST Application&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Spring Boot]&lt;br&gt;&lt;br&gt;Fornece endpoints REST para gerenciamento de produtos. Implementa padrão MVC com Controllers, Services e Repositories." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#0D5EAF;fontColor=#ffffff;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="250" y="200" width="280" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Database Container -->
+        <mxCell id="container-database" value="&lt;b&gt;Database&lt;/b&gt;&lt;br&gt;&lt;br&gt;[H2 Database]&lt;br&gt;&lt;br&gt;Armazena informações de produtos, incluindo nome, descrição, preço e estoque." style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#438DD5;strokeColor=#0D5EAF;fontColor=#ffffff;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="640" y="385" width="280" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Model/Domain Layer -->
+        <mxCell id="container-model" value="&lt;b&gt;Domain Model&lt;/b&gt;&lt;br&gt;&lt;br&gt;[JPA Entities]&lt;br&gt;&lt;br&gt;Entidades de domínio (Produto) mapeadas com JPA para persistência." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6C8EBF;strokeColor=#0D5EAF;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="250" y="385" width="280" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- API Documentation -->
+        <mxCell id="container-docs" value="&lt;b&gt;API Documentation&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Swagger/OpenAPI]&lt;br&gt;&lt;br&gt;Documentação interativa dos endpoints da API." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6C8EBF;strokeColor=#0D5EAF;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="640" y="200" width="280" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- External Users -->
+        <mxCell id="user-external" value="&lt;b&gt;Parceiros/Admins&lt;/b&gt;&lt;br&gt;&lt;br&gt;[Pessoa]" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#2D7600;strokeColor=#1F5100;fontColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="50" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="conn-user-webapi" value="Faz requisições HTTP&lt;br&gt;[JSON/HTTPS]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=11;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="user-external" target="container-webapi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn-webapi-model" value="Utiliza" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="container-webapi" target="container-model">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn-model-database" value="Lê/Grava dados&lt;br&gt;[JPA/JDBC]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=11;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="container-model" target="container-database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="conn-user-docs" value="Consulta documentação&lt;br&gt;[HTTPS]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=11;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="user-external" target="container-docs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="260" />
+              <mxPoint x="150" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="680" width="300" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-title2" value="&lt;b&gt;Legenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="690" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-container2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#438DD5;strokeColor=#0D5EAF;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-container-text2" value="Container (Aplicação/Serviço)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="725" width="230" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-database2" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=5;fillColor=#438DD5;strokeColor=#0D5EAF;" vertex="1" parent="1">
+          <mxGeometry x="50" y="760" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-database-text2" value="Banco de Dados" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="90" y="765" width="230" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

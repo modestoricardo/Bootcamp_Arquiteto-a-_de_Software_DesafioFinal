@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" modified="2024-12-20T10:00:00.000Z" agent="5.0" version="22.1.0" etag="diagram-uml-classes" type="device">
+  <diagram name="UML - Class Diagram" id="uml-class-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title-uml" value="Diagrama de Classes UML - Padrão MVC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="334.5" y="30" width="500" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="subtitle-uml" value="API REST - Gerenciamento de Produtos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="70" width="300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER: Controller -->
+        <mxCell id="layer-controller" value="&lt;&lt; Controller Layer &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="1000" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- ProdutoController -->
+        <mxCell id="class-controller" value="&lt;&lt;RestController&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoController&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="class-controller-attr" value="- produtoService: ProdutoService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-controller">
+          <mxGeometry y="50" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="class-controller-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="class-controller">
+          <mxGeometry y="76" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="class-controller-methods" value="+ listarTodos(): List&lt;Produto&gt;&#10;+ buscarPorId(id: Long): ResponseEntity&lt;Produto&gt;&#10;+ buscarPorNome(nome: String): List&lt;Produto&gt;&#10;+ contar(): long&#10;+ salvar(produto: Produto): Produto&#10;+ deletar(id: Long): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-controller">
+          <mxGeometry y="84" width="400" height="76" as="geometry" />
+        </mxCell>
+
+        <!-- ResponseEntity Note -->
+        <mxCell id="note-controller" value="&lt;b&gt;Nota:&lt;/b&gt; Gerencia requisições HTTP&#10;Endpoints: /produtos&#10;Métodos HTTP: GET, POST, PUT, DELETE" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="600" y="180" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER: Service -->
+        <mxCell id="layer-service" value="&lt;&lt; Service Layer &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="1000" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- ProdutoService -->
+        <mxCell id="class-service" value="&lt;&lt;Service&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoService&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="400" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="class-service-attr" value="- produtoRepository: ProdutoRepository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-service">
+          <mxGeometry y="50" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="class-service-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="class-service">
+          <mxGeometry y="76" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="class-service-methods" value="+ listarTodos(): List&lt;Produto&gt;&#10;+ buscarPorId(id: Long): Optional&lt;Produto&gt;&#10;+ buscarPorNome(nome: String): List&lt;Produto&gt;&#10;+ salvar(produto: Produto): Produto&#10;+ deletar(id: Long): void&#10;+ contarProdutos(): long" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-service">
+          <mxGeometry y="84" width="400" height="76" as="geometry" />
+        </mxCell>
+
+        <!-- Service Note -->
+        <mxCell id="note-service" value="&lt;b&gt;Nota:&lt;/b&gt; Implementa a lógica de negócio&#10;Valida regras de domínio&#10;Intermediário entre Controller e Repository" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="600" y="440" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER: Repository -->
+        <mxCell id="layer-repository" value="&lt;&lt; Repository Layer &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="1000" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- ProdutoRepository -->
+        <mxCell id="class-repository" value="&lt;&lt;Repository&gt;&gt;&lt;br&gt;&lt;b&gt;ProdutoRepository&lt;/b&gt;&lt;br&gt;extends JpaRepository&lt;Produto, Long&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="700" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="class-repository-methods" value="+ findByNome(nome: String): List&lt;Produto&gt;&#10;+ findAll(): List&lt;Produto&gt; (herdado)&#10;+ findById(id: Long): Optional&lt;Produto&gt; (herdado)&#10;+ save(produto: Produto): Produto (herdado)&#10;+ deleteById(id: Long): void (herdado)&#10;+ count(): long (herdado)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="class-repository">
+          <mxGeometry y="70" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Repository Note -->
+        <mxCell id="note-repository" value="&lt;b&gt;Nota:&lt;/b&gt; Interface de acesso a dados&#10;Usa Spring Data JPA&#10;Métodos CRUD automáticos" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="600" y="700" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER: Model -->
+        <mxCell id="layer-model" value="&lt;&lt; Model Layer &gt;&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="880" width="1000" height="260" as="geometry" />
+        </mxCell>
+
+        <!-- Produto Entity -->
+        <mxCell id="class-model" value="&lt;&lt;Entity&gt;&gt;&lt;br&gt;&lt;b&gt;Produto&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="120" y="920" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="class-model-attr" value="- id: Long (@Id @GeneratedValue)&#10;- nome: String&#10;- descricao: String&#10;- preco: BigDecimal&#10;- quantidadeEstoque: Integer&#10;- categoria: String&#10;- dataCadastro: LocalDateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-model">
+          <mxGeometry y="50" width="400" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="class-model-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="class-model">
+          <mxGeometry y="150" width="400" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="class-model-methods" value="+ getId(): Long&#10;+ setId(id: Long): void&#10;+ (getters e setters para todos os atributos)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="class-model">
+          <mxGeometry y="158" width="400" height="42" as="geometry" />
+        </mxCell>
+
+        <!-- Model Note -->
+        <mxCell id="note-model" value="&lt;b&gt;Nota:&lt;/b&gt; Entidade de domínio&#10;Mapeada com JPA para persistência&#10;Representa a tabela PRODUTO no BD" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="600" y="920" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="rel-controller-service" value="usa" style="endArrow=open;endFill=0;endSize=12;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;dashed=1;" edge="1" parent="1" source="class-controller" target="class-service">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="400" as="sourcePoint" />
+            <mxPoint x="460" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel-service-repository" value="usa" style="endArrow=open;endFill=0;endSize=12;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;dashed=1;" edge="1" parent="1" source="class-service" target="class-repository">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="660" as="sourcePoint" />
+            <mxPoint x="460" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="rel-repository-model" value="gerencia" style="endArrow=open;endFill=0;endSize=12;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;dashed=1;" edge="1" parent="1" source="class-repository" target="class-model">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="300" y="880" as="sourcePoint" />
+            <mxPoint x="460" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Architecture Pattern Box -->
+        <mxCell id="pattern-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1180" width="430" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="pattern-title" value="&lt;b&gt;Padrão Arquitetural MVC&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="1195" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pattern-desc" value="&lt;b&gt;Model (Entidade):&lt;/b&gt; Representa os dados e regras de negócio&#10;&lt;b&gt;View (JSON):&lt;/b&gt; Representação dos dados (ResponseEntity)&#10;&lt;b&gt;Controller:&lt;/b&gt; Gerencia requisições e respostas HTTP&#10;&#10;&lt;b&gt;Camadas Adicionais:&lt;/b&gt;&#10;• Service: Lógica de negócio&#10;• Repository: Acesso a dados (persistência)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1225" width="390" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Technology Stack -->
+        <mxCell id="tech-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1180" width="430" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tech-title" value="&lt;b&gt;Stack Tecnológico&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="570" y="1195" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tech-desc" value="&lt;b&gt;Framework:&lt;/b&gt; Spring Boot 3.x&#10;&lt;b&gt;Linguagem:&lt;/b&gt; Java 17+&#10;&lt;b&gt;Persistência:&lt;/b&gt; Spring Data JPA + Hibernate&#10;&lt;b&gt;Banco de Dados:&lt;/b&gt; H2 Database (em memória)&#10;&lt;b&gt;Documentação:&lt;/b&gt; SpringDoc OpenAPI (Swagger)&#10;&lt;b&gt;Build Tool:&lt;/b&gt; Maven&#10;&lt;b&gt;Servidor:&lt;/b&gt; Tomcat Embedded" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;spacing=4;" vertex="1" parent="1">
+          <mxGeometry x="570" y="1225" width="390" height="125" as="geometry" />
+        </mxCell>
+
+        <!-- Database Schema -->
+        <mxCell id="db-schema" value="&lt;b&gt;Tabela: PRODUTO&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1400" width="320" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="db-schema-fields" value="ID (BIGINT) - PK, AUTO_INCREMENT&#10;NOME (VARCHAR(255)) - NOT NULL&#10;DESCRICAO (TEXT)&#10;PRECO (DECIMAL(10,2)) - NOT NULL&#10;QUANTIDADE_ESTOQUE (INT) - NOT NULL&#10;CATEGORIA (VARCHAR(100))&#10;DATA_CADASTRO (TIMESTAMP)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="db-schema">
+          <mxGeometry y="30" width="320" height="170" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
